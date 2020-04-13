@@ -1,7 +1,7 @@
 #include <GLFW/glfw3.h>
 #include <GL/GL.h>
 
-#include "Vector.h"
+#include "Maths/Vector.h"
 #include <iostream>
 
 int main(void)

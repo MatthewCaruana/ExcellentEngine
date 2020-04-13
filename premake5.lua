@@ -19,8 +19,8 @@ project "Math"
 	objdir ("build/obj/%{cfg.longname}/%{prj.name}")
 	
 	files {
-		"Math/*.cpp",
-		"Math/*.h"
+		"Math/Maths/*.cpp",
+		"Math/Maths/*.h"
 	}
 	
 project "ExcellentEngine"
@@ -29,8 +29,8 @@ project "ExcellentEngine"
 	objdir ("build/obj/%{cfg.longname}/%{prj.name}")
 	
 	files{
-		"ExcellentEngine/*.cpp",
-		"ExcellentEngine/*.h"
+		"ExcellentEngine/src/*.cpp",
+		"ExcellentEngine/src/*.h"
 	}
 	
 	includedirs{
