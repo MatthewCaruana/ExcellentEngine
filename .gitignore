@@ -1022,3 +1022,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+*.vcxproj
+*.ini
+*.vcxproj
+*.filters
+*.vcxproj
