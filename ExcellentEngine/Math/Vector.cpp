@@ -19,5 +19,9 @@ namespace Maths {
 
 			return result;
 		}
+
+		void print(Vector a) {
+			std::cout << a.i << "I; " << a.j << "J;" << a.k << "K;" << std::endl;
+		}
 	}
 }
