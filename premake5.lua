@@ -19,8 +19,8 @@ project "Math"
 	objdir ("build/obj/%{cfg.longname}/%{prj.name}")
 	
 	files {
-		"ExcellentEngine/Math/*.cpp",
-		"ExcellentEngine/Math/*.h"
+		"ExcellentEngine/Math/**.cpp",
+		"ExcellentEngine/Math/**.h"
 	}
 	
 project "ExcellentEngine"
@@ -29,12 +29,16 @@ project "ExcellentEngine"
 	objdir ("build/obj/%{cfg.longname}/%{prj.name}")
 	
 	files{
-		"ExcellentEngine/Application/*.cpp",
-		"ExcellentEngine/Application/*.h"
+		"ExcellentEngine/Application/**.cpp",
+		"ExcellentEngine/Application/**.h"
+	}
+	
+	vpaths{
+		["imgui/*"] = { "ExcellentEngine/Application/imgui/*.cpp", "ExcellentEngine/Application/imgui/*.h" }
 	}
 	
 	includedirs{
-		"Math", "vendor/GLFW/include", "vendor/GLEW/include"
+		"ExcellentEngine/Math", "vendor/GLFW/include", "vendor/GLEW/include"
 	}
 	links {
 		"Math", "glfw3", "glew32", "glew32s"
@@ -43,6 +47,8 @@ project "ExcellentEngine"
 	libdirs{
 		"vendor/GLEW/lib/Release/x64", "vendor/GLFW/lib-vc2019"
 	}
+	
+	
 	
 	filter { "system:windows" }
 		links { "opengl32" }
